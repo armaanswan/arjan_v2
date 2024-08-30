@@ -1,0 +1,223 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Home Page */
+
+.albums-section {
+    padding: 2rem;
+}
+
+.section-heading {
+    font-size: 6rem;
+    margin-bottom: 2rem;
+}
+
+.albums-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.album-card {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    color: #000000;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.album-card:hover {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transform: translate(4px, -4px);
+}
+
+.album-cover {
+    width: 300px;
+    border-radius: 0.5rem;
+}
+
+.album-card .album-year {
+    font-weight: 500;
+    color: #adadad;
+}
+
+/* Album Page */
+
+.album-title {
+    font-size: 6rem;
+    padding: 2rem 0 0 2rem;
+}
+
+.album-page-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.album-page-grid .left {
+    grid-column: 1 / 5;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.album-page-grid .middle {
+    grid-column: 5 / 10;
+    padding-left: 1rem;
+}
+
+.album-page-grid .right {
+    grid-column: 10 / 13;
+}
+
+.album-page-grid .left .album-cover {
+    width: 100%;
+}
+
+.album-page-grid .socials {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin: 2rem auto;
+    align-items: center;
+    border-top: 1px solid #adadad;
+    padding-top: 2rem;
+}
+
+.album-page-grid .socials .socials-icon {
+    width: 1.8rem;
+}
+
+.album-page-grid .socials .socials-icon:hover {
+    transform: translate(2px, -2px);
+}
+
+.album-tracklist {
+    list-style-type: none;
+    counter-reset: custom-counter;
+}
+
+.album-tracklist .track {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 1px 0;
+    border-radius: 0.5rem;
+    padding: 0.9rem;
+    cursor: pointer;
+}
+
+.album-tracklist .track .track-number {
+    font-size: 0.8rem;
+}
+
+.album-tracklist .track:hover {
+    background-color: rgb(237, 237, 237);
+}
+
+.album-tracklist .track-name {
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.album-page-grid .right .album-description {
+    font-size: 0.9rem;
+}
+
+.album-attribute {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem 0;
+}
+
+.album-attribute::before {
+    content: attr(data-fieldname);
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #3d3d3d;
+    margin-bottom: 0.3rem;
+}
+
+/* Song Page */
+.song-title {
+    font-size: 6rem;
+    padding: 2rem 2rem 0 2rem;
+}
+
+.song-page-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 2rem 2rem 0 2rem;
+    gap: 1rem;
+}
+
+.song-page-grid .left {
+    grid-column: 1 / 5;
+}
+
+.song-page-grid .middle {
+    grid-column: 6 / 13;
+    overflow: scroll;
+}
+
+.song-page-grid .song-cover {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.song-page-grid .song-attributes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.song-page-grid .song-attributes-container .song-attribute {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.song-page-grid .song-attributes-container .song-attribute::before {
+    content: attr(data-fieldname);
+    top: 0;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #3d3d3d;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+}
+
+.song-page-grid .lyrics {
+    font-size: 1.7rem;
+}
+
+.song-page-grid .song-section {
+    margin-bottom: 2.5rem;
+}
+
+.song-page-grid .song-section::before {
+    content: attr(data-title);
+    top: 0;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: #adadad;
+}
